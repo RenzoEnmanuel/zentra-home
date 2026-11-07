@@ -14,13 +14,13 @@ React (front) -> API REST en Laravel (back) -> MySQL (base de datos)
 
 ## Requisitos
 
-- XAMPP (con MySQL) encendido
+- XAMPP (con MySQL) encendido, última versión obligatorio.
 - PHP 8.3 o superior
 - Composer
 - Node.js
 
 ## Instalación rápida (Windows)
-
+| Error "Ruta de acceso demasiado larga" al extraer el ZIP | Extraer en una carpeta corta, por ejemplo `C:\ZentraHome` |
 1. Encender **MySQL** en el panel de XAMPP.
 2. Doble clic en `zentra-api\instalar-back.bat` (crea la base, las tablas, los 15 productos y el usuario admin). Dejar la ventana abierta.
 3. Doble clic en `zentra-home\iniciar-front.bat`. Dejar la ventana abierta.
