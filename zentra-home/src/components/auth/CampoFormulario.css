@@ -1,0 +1,44 @@
+.campo { display: grid; gap: 8px; }
+
+.campo label {
+  font-family: var(--fuente-destacada);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primario);
+}
+
+.campo__control { position: relative; }
+.campo__control input {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #fdfdfd;
+  font-family: var(--fuente-texto);
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+.campo__control input::placeholder { color: #9a9a9a; }
+.campo__control input:focus-visible {
+  outline: 2px solid var(--banner-3);
+  outline-offset: 1px;
+}
+.campo__control input[type="password"],
+.campo__control input[aria-invalid] { padding-right: 50px; }
+
+.campo__ojo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  color: #777;
+}
+.campo__ojo:hover { color: var(--color-primario); }
+
+.campo--error .campo__control input { border-color: var(--color-agotado); }
+.campo__error { font-size: 0.78rem; color: var(--color-agotado); }
+.campo__ayuda { font-size: 0.75rem; color: #777; }

@@ -1,0 +1,35 @@
+.resumen__titulo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.3rem;
+  color: var(--color-primario);
+  margin-bottom: 14px;
+}
+.resumen__tarjeta {
+  background: #efefef;
+  border-radius: 24px;
+  padding: 22px;
+}
+.resumen__filas > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: var(--color-primario);
+}
+.resumen hr {
+  border: none;
+  border-top: 1px solid #c9c9c9;
+  margin: 8px 0;
+}
+.resumen__total { font-weight: 700; }
+.resumen__boton {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 999px;
+  background: var(--color-boton-carrito);
+  color: #fff;
+  font-family: var(--fuente-destacada);
+  font-size: 0.9rem;
+}
+.resumen__boton:disabled { opacity: 0.6; cursor: wait; }

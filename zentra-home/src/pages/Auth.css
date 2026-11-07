@@ -1,0 +1,91 @@
+/* Estilos compartidos por Login y Registro */
+.auth-tarjeta {
+  width: min(600px, 100%);
+  padding: 44px clamp(24px, 7vw, 72px) 40px;
+  background: #f0f0f0;
+  border-radius: 40px;
+}
+
+.auth-tarjeta__titulo {
+  padding-bottom: 18px;
+  margin-bottom: 32px;
+  text-align: center;
+  border-bottom: 1px solid #d6d6d6;
+  font-family: var(--fuente-destacada);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.auth-form { display: grid; gap: 22px; }
+
+.auth-form__alerta {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #fdecec;
+  border: 1px solid var(--color-agotado);
+  color: #8a1010;
+  font-size: 0.85rem;
+}
+
+.auth-form__aviso {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #e8f1f0;
+  color: var(--color-primario);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Dos clases juntas = más "fuerza" que .boton-pildora de global.css, que si no
+   le gana y deja el botón con solo 6px de relleno */
+.auth-form .auth-form__enviar {
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+.auth-form .auth-form__enviar:disabled { opacity: 0.6; cursor: progress; }
+
+.auth-tarjeta__separador {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0 20px;
+  color: #888;
+  font-size: 0.8rem;
+}
+.auth-tarjeta__separador::before,
+.auth-tarjeta__separador::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d6d6d6;
+}
+
+.auth-tarjeta__alterna { display: grid; justify-items: center; gap: 8px; text-align: center; }
+.auth-tarjeta__alterna p { font-family: var(--fuente-titulos); font-size: 1.05rem; }
+.auth-tarjeta__alterna a {
+  font-family: var(--fuente-destacada);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-primario);
+  text-decoration: underline;
+}
+
+/* Mensaje de registro exitoso */
+.auth-exito {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  padding: 24px 0 8px;
+  text-align: center;
+}
+.auth-exito__icono { color: var(--banner-3); }
+.auth-exito h1 {
+  font-family: var(--fuente-destacada);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.auth-exito p { max-width: 38ch; color: #555; line-height: 1.5; }
+.auth-exito .auth-exito__boton { margin-top: 12px; padding: 14px 44px; font-size: 0.9rem; }

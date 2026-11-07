@@ -1,0 +1,47 @@
+.rastreo-pagina { padding: 32px 20px 20px; }
+
+.resultado { max-width: 760px; margin: 0 auto; }
+.resultado__titulo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.6rem;
+  color: var(--color-primario);
+}
+.resultado__codigo { margin-top: 6px; color: var(--color-primario); }
+
+.resultado__aviso,
+.resultado__alerta {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #efefef;
+  color: var(--color-primario);
+}
+.resultado__alerta { background: #fdeaea; color: var(--color-agotado); }
+
+.resultado__tarjeta {
+  margin-bottom: 22px;
+  padding: 22px;
+  border-radius: 24px;
+  background: #efefef;
+  color: var(--color-primario);
+}
+.resultado__datos > div,
+.resultado__productos li,
+.resultado__total {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+.resultado__datos dt { color: #777; }
+.resultado__productos {
+  list-style: none;
+  margin: 8px 0;
+  padding: 8px 0;
+  border-top: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c9c9c9;
+}
+.resultado__productos small { color: #777; }
+.resultado__total { font-weight: 700; }

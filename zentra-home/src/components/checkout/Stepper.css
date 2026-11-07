@@ -1,0 +1,62 @@
+.stepper {
+  background: #ececec;
+  border-radius: 40px;
+  padding: 18px 40px;
+  margin-bottom: 28px;
+}
+.stepper ol {
+  list-style: none;
+  display: flex;
+}
+.stepper__paso {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Línea que une cada paso con el anterior (sale del centro del círculo anterior) */
+.stepper__paso:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 50%;
+  width: 100%;
+  height: 2px;
+  background: #bdbdbd;
+  z-index: 0;
+}
+.stepper__paso--hecho::before,
+.stepper__paso--actual::before {
+  background: var(--color-primario);
+}
+
+.stepper__circulo {
+  position: relative; /* para quedar por encima de la línea */
+  z-index: 1;  
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #9e9e9e;
+  color: #fff;
+  font-family: var(--fuente-destacada);
+  font-weight: 700;
+}
+.stepper__paso--hecho .stepper__circulo,
+.stepper__paso--actual .stepper__circulo {
+  background: var(--color-primario);
+}
+.stepper__etiqueta {
+  font-family: var(--fuente-destacada);
+  font-size: 0.8rem;
+  color: var(--color-primario);
+}
+
+@media (max-width: 600px) {
+  .stepper { padding: 14px 16px; }
+  .stepper__etiqueta { font-size: 0.7rem; }
+}

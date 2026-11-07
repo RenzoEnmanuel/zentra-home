@@ -1,0 +1,68 @@
+.linea {
+  list-style: none;
+  display: flex;
+  margin: 28px 0;
+}
+.linea__paso {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+/* Línea que une cada etapa con la anterior */
+.linea__paso:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  right: 50%;
+  width: 100%;
+  height: 3px;
+  background: #cfcfcf;
+  z-index: 0;
+}
+.linea__paso--hecho::before,
+.linea__paso--actual::before {
+  background: var(--color-primario);
+}
+
+.linea__icono {
+  position: relative;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #cfcfcf;
+  color: #fff;
+}
+.linea__paso--hecho .linea__icono,
+.linea__paso--actual .linea__icono {
+  background: var(--color-primario);
+}
+/* La etapa actual se resalta con un aro */
+.linea__paso--actual .linea__icono {
+  box-shadow: 0 0 0 5px rgba(21, 73, 69, 0.2);
+}
+
+.linea__etiqueta {
+  margin-top: 6px;
+  font-family: var(--fuente-destacada);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #9a9a9a;
+}
+.linea__paso--hecho .linea__etiqueta,
+.linea__paso--actual .linea__etiqueta {
+  color: var(--color-primario);
+}
+.linea__detalle { font-size: 0.75rem; color: #777; }
+
+@media (max-width: 600px) {
+  .linea__detalle { display: none; }
+  .linea__etiqueta { font-size: 0.7rem; }
+}

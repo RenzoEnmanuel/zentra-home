@@ -1,0 +1,29 @@
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  color: var(--color-fondo);
+}
+
+.estadisticas__item {
+  display: grid;
+  gap: 4px;
+  padding: 22px 10px;
+}
+
+.estadisticas__item:nth-child(1) { background: var(--banner-1); }
+.estadisticas__item:nth-child(2) { background: var(--banner-2); }
+.estadisticas__item:nth-child(3) { background: var(--banner-3); }
+
+.estadisticas__item strong {
+  font-family: var(--fuente-destacada);
+  font-size: 1.2rem;
+}
+
+.estadisticas__item span {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .estadisticas { grid-template-columns: 1fr; }
+}

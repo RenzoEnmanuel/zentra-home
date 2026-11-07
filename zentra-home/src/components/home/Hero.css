@@ -1,0 +1,93 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) 1.4fr;
+  min-height: 420px;
+  background: var(--color-fondo);
+}
+
+.hero__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 40px 40px 48px;
+}
+
+.hero__etiqueta {
+  margin-bottom: 20px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--color-primario);
+  color: var(--color-fondo);
+  font-family: var(--fuente-destacada);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.hero__titulo {
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+  line-height: 1.15;
+  color: var(--color-primario);
+}
+.hero__titulo span { display: block; color: var(--banner-3); }
+
+.hero__texto { max-width: 440px; margin: 18px 0 24px; font-size: 0.85rem; }
+
+.hero__botones { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero__botones .boton-pildora { padding: 12px 26px; }
+
+.hero__garantias {
+  display: flex;
+  gap: 40px;
+  margin-top: 22px;
+  list-style: none;
+  font-size: 0.8rem;
+}
+.hero__garantias li { display: flex; align-items: center; gap: 8px; }
+
+/* Imagen */
+.hero__visual { position: relative; min-height: 320px; }
+.hero__imagen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(27, 63, 60, 0.85);
+  color: #fff;
+}
+.hero__flecha--izq { left: 16px; }
+.hero__flecha--der { right: 16px; }
+
+.hero__puntos {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(27, 63, 60, 0.7);
+}
+.hero__punto { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.5); }
+.hero__punto--activo { background: #fff; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero__contenido { padding: 28px 20px; }
+  .hero__visual { height: 260px; }
+}

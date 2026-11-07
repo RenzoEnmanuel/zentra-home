@@ -1,0 +1,63 @@
+.detalle__fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.detalle {
+  position: relative;
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 28px;
+  background: #fff;
+  border-radius: 24px;
+}
+.detalle__cerrar { position: absolute; top: 14px; right: 14px; color: #555; }
+
+.detalle__principal { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+.detalle__imagen { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 18px; }
+.detalle__miniaturas { display: flex; gap: 10px; margin-top: 10px; }
+.detalle__miniatura {
+  width: 64px; height: 64px; padding: 0; overflow: hidden;
+  border: 2px solid transparent; border-radius: 10px;
+}
+.detalle__miniatura img { width: 100%; height: 100%; object-fit: cover; }
+.detalle__miniatura--activa { border-color: var(--banner-3); }
+
+.detalle__info { display: grid; gap: 10px; align-content: start; }
+.detalle__marca { font-size: 0.8rem; color: var(--banner-3); }
+.detalle__nombre { font-family: var(--fuente-destacada); font-size: 1.5rem; line-height: 1.2; }
+.detalle__precio { font-family: var(--fuente-destacada); font-size: 1.9rem; font-weight: 700; color: var(--color-primario); }
+.detalle__precio-antes { margin-top: -8px; font-size: 0.85rem; color: #777; text-decoration: line-through; }
+
+.detalle__cantidad {
+  display: inline-flex; align-items: center; width: fit-content;
+  border: 1px solid #ccc; border-radius: 10px;
+}
+.detalle__cantidad button { width: 40px; height: 40px; display: grid; place-items: center; }
+.detalle__cantidad span { width: 50px; text-align: center; }
+
+.detalle__agregar { justify-content: space-between; padding-left: 22px; font-size: 0.8rem; }
+
+.detalle__pestanas { margin-top: 28px; border: 1px solid #ddd; border-radius: 14px; overflow: hidden; }
+.detalle__tabs { display: flex; }
+.detalle__tab {
+  flex: 1; padding: 14px; background: #f3f3f3;
+  font-family: var(--fuente-destacada);
+  border-bottom: 3px solid transparent;
+}
+.detalle__tab--activa { background: #fff; color: var(--color-primario); border-bottom-color: var(--color-primario); }
+.detalle__panel { padding: 22px; font-size: 0.9rem; }
+
+.detalle__specs div { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
+.detalle__specs dt { color: #666; }
+
+@media (max-width: 700px) {
+  .detalle__principal { grid-template-columns: 1fr; }
+}

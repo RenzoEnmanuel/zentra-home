@@ -1,0 +1,4 @@
+.estrellas { display: flex; align-items: center; gap: 2px; }
+.estrella { color: #b9b9b9; fill: currentColor; }
+.estrella--llena { color: #f2a900; }
+.estrellas__total { margin-left: 6px; font-size: 0.7rem; color: #777; }

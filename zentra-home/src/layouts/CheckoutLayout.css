@@ -1,0 +1,26 @@
+.checkout {
+  min-height: 100vh;
+  background: #fff;
+}
+.checkout__encabezado {
+  padding: 12px 28px;
+  border-bottom: 1px solid #ececec;
+}
+.checkout__encabezado img { height: 44px; }
+
+.checkout__contenido {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+.checkout__cuerpo {
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 32px;
+  align-items: start;
+}
+.checkout__cuerpo--solo { grid-template-columns: 1fr; }
+
+@media (max-width: 800px) {
+  .checkout__cuerpo { grid-template-columns: 1fr; }
+}

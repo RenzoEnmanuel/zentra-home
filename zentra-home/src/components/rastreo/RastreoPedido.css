@@ -1,0 +1,63 @@
+.rastreo {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+}
+.rastreo__imagen {
+  flex-shrink: 0;
+  width: 200px;       /* cambia este valor para hacerla más grande o más chica */
+  height: auto;       /* mantiene las proporciones */
+  object-fit: contain;
+}
+.rastreo__contenido { flex: 1; }
+
+.rastreo__titulo {
+  margin-bottom: 18px;
+  font-family: var(--fuente-titulos);
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-primario);
+}
+
+/* La etiqueta del campo no se ve (el boceto no la muestra), pero los lectores de pantalla sí la leen */
+.rastreo .campo label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.rastreo .campo__control input {
+  height: 46px;
+  border-radius: 12px;
+  background: #f1f1f1;
+}
+
+.rastreo__ayuda { margin: 10px 0 18px; font-size: 0.75rem; color: #777; }
+.rastreo__ayuda summary { cursor: pointer; }
+.rastreo__ayuda p { margin-top: 6px; line-height: 1.5; }
+
+.rastreo__boton {
+  display: block;
+  margin-left: auto;
+  padding: 10px 34px;
+  background: var(--banner-1);
+}
+
+@media (max-width: 640px) {
+  .rastreo {
+    flex-direction: column;
+    gap: 16px;
+    margin: 32px 16px;
+    padding: 24px 18px;
+    .rastreo__imagen { width: 140px; }
+  }
+  .rastreo__contenido { width: 100%; }
+}

@@ -1,0 +1,27 @@
+.auth-layout { min-height: 100vh; background: #fff; }
+
+.auth-layout__encabezado {
+  padding: 6px 40px;
+  border-bottom: 2px solid var(--banner-3);
+}
+.auth-layout__encabezado img { height: 64px; display: block; }
+
+.auth-layout__banner {
+  width: 100%;
+  height: clamp(110px, 16vw, 260px);
+  display: block;
+  object-fit: cover;        /* llena el ancho recortando lo que sobre, sin deformar */
+  object-position: center 60%;
+}
+
+.auth-layout__contenido {
+  padding: 48px 16px 72px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .auth-layout__encabezado { padding: 6px 16px; }
+  .auth-layout__encabezado img { height: 52px; }
+  .auth-layout__contenido { padding-top: 32px; }
+}

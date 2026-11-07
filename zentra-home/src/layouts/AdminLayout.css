@@ -1,0 +1,82 @@
+.admin {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  min-height: 100vh;
+  background: #eef2f1;
+}
+
+/* ---- Menú lateral ---- */
+.admin__lateral {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px 16px 20px;
+  background: var(--color-primario);
+  color: #fff;
+}
+.admin__logo { width: 150px; align-self: center; }
+.admin__menu { display: grid; gap: 8px; align-content: start; flex: 1; }
+
+.admin__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-family: var(--fuente-destacada);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d8e6e3;
+  transition: background 0.15s;
+}
+.admin__link:hover { background: rgba(255, 255, 255, 0.12); }
+.admin__link.active { background: #fff; color: var(--color-primario); font-weight: 700; }
+.admin__link--off { opacity: 0.45; cursor: not-allowed; }
+.admin__link--off:hover { background: none; }
+.admin__link small { margin-left: auto; font-size: 0.6rem; }
+
+.admin__salir {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-family: var(--fuente-destacada);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.admin__salir:hover { background: rgba(0, 0, 0, 0.4); }
+
+/* ---- Cabecera y contenido ---- */
+.admin__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  background: var(--color-primario);
+  color: #fff;
+}
+.admin__cabecera h1 {
+  font-family: var(--fuente-destacada);
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.admin__usuario { font-size: 0.85rem; opacity: 0.85; }
+.admin__pagina { padding: 28px 32px 40px; }
+
+/* ---- Móvil ---- */
+@media (max-width: 800px) {
+  .admin { grid-template-columns: 1fr; }
+  .admin__lateral { position: static; height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .admin__logo { width: 100px; }
+  .admin__menu { display: flex; flex-wrap: wrap; flex: 1; }
+  .admin__pagina { padding: 20px 16px 32px; }
+}
