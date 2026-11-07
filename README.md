@@ -22,13 +22,21 @@ React (front) -> API REST en Laravel (back) -> MySQL (base de datos)
 ## Instalación rápida (Windows)
 | Error "Ruta de acceso demasiado larga" al extraer el ZIP | Extraer en una carpeta corta, por ejemplo `C:\ZentraHome` |
 hacer este paso solo si al moment ode extraer aparece un mensaje de error.
+
 1.Abrir XAMPP , (mantenerlo encendido para no perder la conexion con la base de datos)
+
 2. Encender **MySQL** y **Apache** en el panel de XAMPP.
+
 3.Descargar nuestro proyecto desde github con nombre "zentra-home-main" y extraerlo
+
 4.Luego de extraerlo abrir el documento y estre tendra 3 archivos zentra-api , zentra-home y el manual README
+
 5. Al ingresar a nuestro archivo zentra-api Doble clic en `instalar-back.bat` (crea la base, las tablas, los 15 productos y el usuario admin). Para no perder la conexion no cerrar el cmmd ,
+
 3. Ahora ingresamos a nuestra caprtepa zentra-home y Doble clic en `iniciar-front.bat`. Dejar la ventana abierta del cmd para no perder la conexion con nuestro front.
+
 4. Abrir http://localhost:5173
+
 5. 5. (Opcional) Para ver la base de datos, encender también Apache
    en XAMPP y abrir http://localhost/phpmyadmin para ver nuestra base de datos y ver los cambios y interacciones. 
 
