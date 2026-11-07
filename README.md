@@ -14,7 +14,7 @@ React (front) -> API REST en Laravel (back) -> MySQL (base de datos)
 
 ## Requisitos
 
-- XAMPP (con MySQL) encendido, última versión obligatorio.
+- XAMPP (activar MySQL y Apache) encendido, última versión obligatorio.
 - PHP 8.3 o superior
 - Composer
 - Node.js
