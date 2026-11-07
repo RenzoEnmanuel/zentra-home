@@ -25,6 +25,8 @@ React (front) -> API REST en Laravel (back) -> MySQL (base de datos)
 2. Doble clic en `zentra-api\instalar-back.bat` (crea la base, las tablas, los 15 productos y el usuario admin). Dejar la ventana abierta.
 3. Doble clic en `zentra-home\iniciar-front.bat`. Dejar la ventana abierta.
 4. Abrir http://localhost:5173
+5. 5. (Opcional) Para ver la base de datos, encender también Apache
+   en XAMPP y abrir http://localhost/phpmyadmin        ← NUEVO
 
 ## Instalación manual
 
