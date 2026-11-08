@@ -2,67 +2,8 @@
 
 Proyecto académico (IDAT, EFSRT). Tienda en línea con catálogo, registro de clientes, pedidos con código de rastreo y panel de administración.
 
-## Arquitectura
-
-React (front) -> API REST en Laravel (back) -> MySQL (base de datos)
-
-| Carpeta | Contenido | Tecnología |
-|---|---|---|
-| `zentra-home` | Tienda y panel admin | React 19 + Vite |
-| `zentra-api` | API REST y base de datos | Laravel 13 + Sanctum |
-| Base de datos `zentra_home` | Datos del sistema | MySQL / MariaDB (XAMPP) |
-
-## Arranque rápido (resumen)
-
-1. Tener instalados **XAMPP, Composer y Node.js** (ver Requisitos).
-2. Descargar el proyecto y **extraerlo en una carpeta corta**, por ejemplo `C:\ZentraHome`.
-3. En XAMPP, **Start en MySQL y APACHE**. Luego doble clic en **`zentra-api\instalar-back.bat`** (arranca el back-end).
-4. Doble clic en **`zentra-home\iniciar-front.bat`** (arranca el front-end) y abrir http://localhost:5173.
-
-> **Si algo falla, leer los recuadros "ERRORES MÁS COMUNES" más abajo, sobre todo el de la extensión `zip`.**
-
-## Requisitos previos
-
-- **Windows** con conexión a internet (para instalar las librerías).
-- **XAMPP** instalado en `C:\xampp` (ruta por defecto), con **PHP 8.3 o superior**. Incluye MySQL y phpMyAdmin. Probado con PHP 8.3.36; también debería funcionar con 8.4 y 8.5.
-- **Extensión `zip` de PHP activada** (ver el recuadro de errores).
-- **Composer**: https://getcomposer.org/download/
-- **Node.js 20.19 o superior**: https://nodejs.org
-- `php`, `composer` y `node` deben reconocerse en CMD.
-
-Para comprobarlo, abrir CMD y ejecutar estos comandos. Cada uno debe responder sin error:
-
-    php -v
-    composer -V
-    node -v
-    php -m | findstr /i zip
-
-El último debe mostrar la palabra **zip**. Si no muestra nada, leer el recuadro de errores.
-
-## Descargar el proyecto
-
-**Opción A: ZIP.** Entrar a https://github.com/RenzoEnmanuel/zentra-home, botón verde **Code**, **Download ZIP**, y extraer en una carpeta corta.
-
-**Opción B: git clone** (necesita Git instalado). En CMD:
-
-    cd /d C:\
-    git clone https://github.com/RenzoEnmanuel/zentra-home.git ZentraHome
-
-Con esta opción las carpetas quedan en `C:\ZentraHome`, sin la carpeta `zentra-home-main`, y no aparece el error de ruta larga.
-
-## Cómo arrancar el proyecto con los `.bat` (paso a paso)
-
-1. Abrir **XAMPP** y presionar **Start** en **MySQL**. Dejarlo encendido mientras se use el proyecto.
-2. Entrar a la carpeta **`zentra-api`** y hacer **doble clic** en **`instalar-back.bat`**. Crea la base de datos, las tablas, los 15 productos y el usuario admin, y arranca el back-end. **No cerrar esa ventana**: es el servidor del back-end.
-3. **Comprobar que salió bien:** la ventana debe terminar con `Server running on [http://127.0.0.1:8000]` y debe existir la carpeta `vendor` dentro de `zentra-api`. Si aparecen errores antes de eso, ver los recuadros siguientes.
-4. Entrar a la carpeta **`zentra-home`** y hacer **doble clic** en **`iniciar-front.bat`**. Instala las librerías del front-end y lo arranca. **No cerrar esa ventana**: es el servidor del front-end.
-5. Abrir http://localhost:5173 en el navegador.
-6. *(Opcional)* Para ver la base de datos, encender también **Apache** en XAMPP y abrir http://localhost/phpmyadmin.
-
-Siempre se necesitan **las dos ventanas negras abiertas** (back y front) mientras se usa la tienda.
-
 > [!CAUTION]
-> ## ERRORES MÁS COMUNES: LEER SI EL `.BAT` FALLA
+> ## LEER ANTES DE EJECUTAR: ERRORES MÁS COMUNES
 >
 > ### 1. LA EXTENSIÓN ZIP DE PHP ESTÁ DESACTIVADA
 >
@@ -89,6 +30,63 @@ Siempre se necesitan **las dos ventanas negras abiertas** (back y front) mientra
 > ### 3. EJECUTAR EL `.BAT` DESDE DENTRO DEL ZIP
 >
 > **NO EJECUTAR LOS `.bat` DESDE DENTRO DEL ZIP. PRIMERO EXTRAER TODO.**
+
+## Arranque rápido (resumen)
+
+1. Tener instalados **XAMPP, Composer y Node.js** (ver Requisitos).
+2. Descargar el proyecto y **extraerlo en una carpeta corta**, por ejemplo `C:\ZentraHome`.
+3. En XAMPP, **Start en MySQL**. Luego doble clic en **`zentra-api\instalar-back.bat`** (arranca el back-end).
+4. Doble clic en **`zentra-home\iniciar-front.bat`** (arranca el front-end) y abrir http://localhost:5173.
+
+## Arquitectura
+
+React (front) -> API REST en Laravel (back) -> MySQL (base de datos)
+
+| Carpeta | Contenido | Tecnología |
+|---|---|---|
+| `zentra-home` | Tienda y panel admin | React 19 + Vite |
+| `zentra-api` | API REST y base de datos | Laravel 13 + Sanctum |
+| Base de datos `zentra_home` | Datos del sistema | MySQL / MariaDB (XAMPP) |
+
+## Requisitos previos
+
+- **Windows** con conexión a internet (para instalar las librerías).
+- **XAMPP** instalado en `C:\xampp` (ruta por defecto), con **PHP 8.3 o superior**. Incluye MySQL y phpMyAdmin. Probado con PHP 8.3.36; también debería funcionar con 8.4 y 8.5.
+- **Extensión `zip` de PHP activada** (ver el recuadro rojo del inicio).
+- **Composer**: https://getcomposer.org/download/
+- **Node.js 20.19 o superior**: https://nodejs.org
+- `php`, `composer` y `node` deben reconocerse en CMD.
+
+Para comprobarlo, abrir CMD y ejecutar estos comandos. Cada uno debe responder sin error:
+
+    php -v
+    composer -V
+    node -v
+    php -m | findstr /i zip
+
+El último debe mostrar la palabra **zip**. Si no muestra nada, seguir los pasos del recuadro rojo del inicio.
+
+## Descargar el proyecto
+
+**Opción A: ZIP.** Entrar a https://github.com/RenzoEnmanuel/zentra-home, botón verde **Code**, **Download ZIP**, y extraer en una carpeta corta.
+
+**Opción B: git clone** (necesita Git instalado). En CMD:
+
+    cd /d C:\
+    git clone https://github.com/RenzoEnmanuel/zentra-home.git ZentraHome
+
+Con esta opción las carpetas quedan en `C:\ZentraHome`, sin la carpeta `zentra-home-main`, y no aparece el error de ruta larga.
+
+## Cómo arrancar el proyecto con los `.bat` (paso a paso)
+
+1. Abrir **XAMPP** y presionar **Start** en **MySQL**. Dejarlo encendido mientras se use el proyecto.
+2. Entrar a la carpeta **`zentra-api`** y hacer **doble clic** en **`instalar-back.bat`**. Crea la base de datos, las tablas, los 15 productos y el usuario admin, y arranca el back-end. **No cerrar esa ventana**: es el servidor del back-end.
+3. **Comprobar que salió bien:** la ventana debe terminar con `Server running on [http://127.0.0.1:8000]` y debe existir la carpeta `vendor` dentro de `zentra-api`. Si aparecen errores antes de eso, volver al **recuadro rojo del inicio**.
+4. Entrar a la carpeta **`zentra-home`** y hacer **doble clic** en **`iniciar-front.bat`**. Instala las librerías del front-end y lo arranca. **No cerrar esa ventana**: es el servidor del front-end.
+5. Abrir http://localhost:5173 en el navegador.
+6. *(Opcional)* Para ver la base de datos, encender también **Apache** en XAMPP y abrir http://localhost/phpmyadmin.
+
+Siempre se necesitan **las dos ventanas negras abiertas** (back y front) mientras se usa la tienda.
 
 ## Instalación manual
 
@@ -194,6 +192,4 @@ Si las tablas existen pero falta el admin, en `zentra-api` ejecutar:
 
 - Oscar Osorio (líder)
 - Daniel Pernia Zambrano (analista)
-- Leydi Vargas Torres (UI/UX, Figma)
-- Jogeiber Cardona Useche (Front-End)
-- Renzo Coaguila Palacios (Back-End y Base de Datos)
+- Leydi Vargas Torres
