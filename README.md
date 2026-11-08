@@ -20,8 +20,11 @@ React (front) -> API REST en Laravel (back) -> MySQL (base de datos)
 - Node.js
 
 ## Instalación rápida (Windows)
-| Error "Ruta de acceso demasiado larga" al extraer el ZIP | Extraer en una carpeta corta, por ejemplo `C:\ZentraHome` |
-hacer este paso solo si al moment ode extraer aparece un mensaje de error.
+
+NOTA: DESCARGAR ZENTRA HOME: github.com/RenzoEnmanuel/zentra-home → BOTÓN VERDE CODE → DOWNLOAD ZIP.
+
+IMPORTANTE: EXTRAER EL ZIP EN UNA CARPETA CORTA, POR EJEMPLO C:\ZentraHome. SI LO EXTRAES EN UNA CARPETA LARGA, WINDOWS DA EL ERROR "RUTA DE ACCESO DEMASIADO LARGA" (0x80010135). SI TE SALE, CANCELA Y EXTRAE EN C:\ZentraHome\zentra-home-main. NO PRESIONES "OMITIR".
+Las instrucciones completas para ejecutarlo están en el README del repositorio.
 
 1.Abrir XAMPP , (mantenerlo encendido para no perder la conexion con la base de datos)
 
