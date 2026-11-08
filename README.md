@@ -5,7 +5,9 @@ Proyecto académico (IDAT, EFSRT). Tienda en línea con catálogo, registro de c
 
 > [!CAUTION]
 > ## LEER ANTES DE EJECUTAR: ERRORES MÁS COMUNES
->
+>         
+> ## Video de demostración y corrección de errores 
+>          https://youtu.be/uV9BKjpKs6A
 > ### 1. LA EXTENSIÓN ZIP DE PHP ESTÁ DESACTIVADA
 >
 > En algunas versiones de XAMPP la extensión `zip` de PHP viene **desactivada**. Composer la necesita para instalar las librerías del back-end. Si está desactivada:
