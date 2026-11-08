@@ -1,6 +1,7 @@
 # ZENTRA HOME - Tienda virtual de electrodomésticos
 
 Proyecto académico (IDAT, EFSRT). Tienda en línea con catálogo, registro de clientes, pedidos con código de rastreo y panel de administración.
+Tener instalados XAMPP, Composer y Node.js (ver Requisitos).
 
 > [!CAUTION]
 > ## LEER ANTES DE EJECUTAR: ERRORES MÁS COMUNES
@@ -35,7 +36,7 @@ Proyecto académico (IDAT, EFSRT). Tienda en línea con catálogo, registro de c
 
 1. Tener instalados **XAMPP, Composer y Node.js** (ver Requisitos).
 2. Descargar el proyecto y **extraerlo en una carpeta corta**, por ejemplo `C:\ZentraHome`.
-3. En XAMPP, **Start en MySQL**. Luego doble clic en **`zentra-api\instalar-back.bat`** (arranca el back-end).
+3. En XAMPP, **Start en MySQL y APACHE**. Luego doble clic en **`zentra-api\instalar-back.bat`** (arranca el back-end).
 4. Doble clic en **`zentra-home\iniciar-front.bat`** (arranca el front-end) y abrir http://localhost:5173.
 
 ## Arquitectura
