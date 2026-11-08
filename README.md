@@ -1,7 +1,7 @@
 # ZENTRA HOME - Tienda virtual de electrodomésticos
 
 Proyecto académico (IDAT, EFSRT). Tienda en línea con catálogo, registro de clientes, pedidos con código de rastreo y panel de administración.
-Tener instalados XAMPP, Composer y Node.js (ver Requisitos).
+Tener instalados XAMPP ver 8.3 o superior, Composer y Node.js (ver Requisitos).
 
 > [!CAUTION]
 > ## LEER ANTES DE EJECUTAR: ERRORES MÁS COMUNES
