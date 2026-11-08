@@ -16,7 +16,7 @@ React (front) -> API REST en Laravel (back) -> MySQL (base de datos)
 
 1. Tener instalados **XAMPP, Composer y Node.js** (ver Requisitos).
 2. Descargar el proyecto y **extraerlo en una carpeta corta**, por ejemplo `C:\ZentraHome`.
-3. En XAMPP, **Start en MySQL**. Luego doble clic en **`zentra-api\instalar-back.bat`** (arranca el back-end).
+3. En XAMPP, **Start en MySQL y APACHE**. Luego doble clic en **`zentra-api\instalar-back.bat`** (arranca el back-end).
 4. Doble clic en **`zentra-home\iniciar-front.bat`** (arranca el front-end) y abrir http://localhost:5173.
 
 > **Si algo falla, leer los recuadros "ERRORES MÁS COMUNES" más abajo, sobre todo el de la extensión `zip`.**
